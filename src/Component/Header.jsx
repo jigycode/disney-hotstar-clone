@@ -41,11 +41,15 @@ export function Header() {
       name: "SERIES",
       icon: <HiTv />,
     },
+    // {
+    //   name: "",
+    //   icon: <HiDotsVertical />,
+    // },
   ];
   return (
     <>
       {" "}
-      <div className="flex  items-center justify-between p-5 w-auto bg-blue-950 ">
+      <div className="flex  items-center justify-evenly p-2  bg-blue-950 ">
         <div className="flex gap-6 items-center  ">
           <img src={logo2} className="w-[75px] md:w-[115px] p-6 object-cover" />
           <div className="hidden md:flex  gap-8">
@@ -53,18 +57,21 @@ export function Header() {
               <HeaderItem key={index} name={item.name} Icon={item.icon} />
             ))}
           </div>
-          <div className="flex md:hidden gap-8 bg-blue-950 sm:w-full">
+          <div className="flex md:hidden gap-3 bg-blue-950 sm:w-full ">
             {menu.map(
               (item, index) =>
                 index < 3 && (
-                  <HeaderItem key={index} name={item.name} Icon={item.icon} />
+                  <HeaderItem key={index} name={""} Icon={item.icon} />
                 )
             )}
-            <div className="flex md:hidden" onClick={() => setToggle(!toggle)}>
-              <HeaderItem name={""} Icon={HiDotsVertical} />
+            <div
+              className="text-white font-bold md:hidden flex"
+              onClick={() => setToggle(!toggle)}
+            >
+              <HiDotsVertical />
               {toggle ? (
                 <div
-                  className="absolute mt-3 bg-[#f5f4f4] 
+                  className="absolute mt-3 bg-[#0d163d] 
             border-[1px] border-gray-700 p-3 px-5 py-4"
                 >
                   {menu.map(
@@ -82,7 +89,7 @@ export function Header() {
             </div>
           </div>
         </div>
-        <img src={profille} className="w-[50px] mr-6" />
+        <img src={profille} className="w-[45px] " />
       </div>
     </>
   );

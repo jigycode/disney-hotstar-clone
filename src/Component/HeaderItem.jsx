@@ -7,7 +7,7 @@ function HeaderItem({ name, Icon }) {
     underline-offset-8 mb-2"
     >
       {Icon}
-      <h2 className="hidden md:block ">{name}</h2>
+      <h2 className=" md:block ">{name}</h2>
     </div>
   );
 }
