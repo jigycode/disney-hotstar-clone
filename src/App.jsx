@@ -1,12 +1,10 @@
 import "./App.css";
+import { Header } from "./Component/Header";
 
 function App() {
   return (
     <>
-      <div></div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
     </>
   );
 }
